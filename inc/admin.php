@@ -42,8 +42,8 @@ function add_setting(): void {
 function add_settings_page(): void {
 	add_submenu_page(
 		'settings.php',
-		__( 'Content Moderation', 'content-moderation' ),
-		__( 'Content Moderation', 'content-moderation' ),
+		__( 'Content Moderation', 'hm-content-moderation' ),
+		__( 'Content Moderation', 'hm-content-moderation' ),
 		'manage_network',
 		Constants\SETTING,
 		__NAMESPACE__ . '\\render_settings_page',
@@ -60,7 +60,7 @@ function add_settings_page(): void {
 	// Add checkbox to enforce network wide content moderation overriding per site settings.
 	add_settings_field(
 		Constants\SETTING_ENFORCE_NETWORK_WIDE_CONTENT_MODERATION,
-		__( 'Enforce Network Wide Content Moderation', 'content-moderation' ),
+		__( 'Enforce Network Wide Content Moderation', 'hm-content-moderation' ),
 		__NAMESPACE__ . '\\render_enforce_network_wide_content_moderation_field',
 		Constants\SETTING,
 		Constants\SECTION
@@ -69,7 +69,7 @@ function add_settings_page(): void {
 	// Add text area setting for adding disallowed keys to be used when network wide content moderation is enforced.
 	add_settings_field(
 		Constants\SETTING_DISALLOWED_KEYS,
-		__( 'Disallowed Keys', 'content-moderation' ),
+		__( 'Disallowed Keys', 'hm-content-moderation' ),
 		__NAMESPACE__ . '\\render_disallowed_keys_field',
 		Constants\SETTING,
 		Constants\SECTION
@@ -101,7 +101,7 @@ function render_settings_page(): void {
  */
 function render_settings_section(): void {
 	?>
-	<p><?php echo esc_html__( 'When enabled, this will enforce network wide content moderation overriding per site settings.', 'content-moderation' ); ?></p>
+	<p><?php echo esc_html__( 'When enabled, this will enforce network wide content moderation overriding per site settings.', 'hm-content-moderation' ); ?></p>
 	<?php
 }
 
@@ -160,7 +160,7 @@ function maybe_disable_site_disallowed_keys_setting(): void {
 	}
 
 	add_settings_field(
-		'content-moderation-disable-site-settings',
+		'hm-content-moderation-disable-site-settings',
 		'',
 		__NAMESPACE__ . '\\render_disable_site_settings_field',
 		'discussion'
@@ -190,6 +190,6 @@ function render_disable_site_settings_field(): void {
 			opacity: 0.3;
 		}
 	</style>
-	<p style="color: red; font-style: italic;"><?php echo esc_html__( "This site's disallowed keys setting is disabled as network wide content moderation is enabled.", 'content-moderation' ); ?></p>
+	<p style="color: red; font-style: italic;"><?php echo esc_html__( "This site's disallowed keys setting is disabled as network wide content moderation is enabled.", 'hm-content-moderation' ); ?></p>
 	<?php
 }
