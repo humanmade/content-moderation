@@ -3,7 +3,7 @@
  * Plugin Name: Content Moderation
  * Plugin URI:  https://github.com/humanmade/content-moderation
  * Description: Extends content moderation functionality of a WordPress site.
- * Version:     0.1.0
+ * Version:     0.1.1
  * Author:      Human Made
  * Author URI:  https://humanmade.com/
  * License:     GPLv2 or later
