@@ -16,6 +16,7 @@ use Content_Moderation\Utils;
  */
 function bootstrap(): void {
 	Admin\bootstrap();
+	GravityForms\bootstrap();
 
 	add_filter( 'pre_option', __NAMESPACE__ . '\\maybe_use_network_disallowed_keys', 10, 2 );
 }
