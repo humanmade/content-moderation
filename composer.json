@@ -3,7 +3,7 @@
     "description": "Extends content moderation functionality of a WordPress site.",
     "type": "wordpress-plugin",
     "license": "GPL-2.0-or-later",
-	"version": "0.1.0",
+	"version": "0.1.1",
     "authors": [
         {
             "name": "Human Made",
