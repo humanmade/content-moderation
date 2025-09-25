@@ -155,6 +155,10 @@ function sanitize_settings( $settings ): array {
 function maybe_disable_site_disallowed_keys_setting(): void {
 	$content_moderation_settings = Utils\get_content_moderation_settings();
 
+	if ( ! isset( $content_moderation_settings[ Constants\SETTING_ENFORCE_NETWORK_WIDE_CONTENT_MODERATION ] ) ) {
+		return;
+	}
+
 	if ( ! $content_moderation_settings[ Constants\SETTING_ENFORCE_NETWORK_WIDE_CONTENT_MODERATION ] ) {
 		return;
 	}
